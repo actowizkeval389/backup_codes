@@ -4,7 +4,7 @@ import datetime
 print("executing python file backup")
 
 # Directory to search
-search_path = r"enter_your_path"  # Update as needed
+search_path = input("enter_your_path of which path you need backup of your code: ")
 
 # Directory to store collected Python files (stored *outside* the search path is safer)
 backup_dir = "python_file_backups"
@@ -42,6 +42,7 @@ def collect_python_files(root_path):
         print("⚠️ No Python files found.")
     else:
         print(f"\n✅ Total {count} Python files backed up.")
+        print(f"\n✅ Backup of your file has been completed at path:: {os.getcwd()} ")
 
 
 if __name__ == "__main__":
