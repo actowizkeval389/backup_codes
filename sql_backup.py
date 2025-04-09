@@ -70,6 +70,7 @@ def backup_databases(databases):
                     check=True
                 )
             print(f"✅ Backup successful for: {db}")
+            print(f"\n✅ Backup of your file has been completed at path:: {os.getcwd()} ")
         except subprocess.CalledProcessError as e:
             print(f"❌ Backup failed for: {db}")
             print("Error:", e.stderr)
@@ -80,4 +81,3 @@ if __name__ == "__main__":
         backup_databases(dbs)
     else:
         print("No databases found or failed to connect.")
-
